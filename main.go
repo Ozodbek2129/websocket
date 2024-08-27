@@ -23,7 +23,7 @@ func main() {
 
 	mux.HandleFunc("/", Handler_conection)
 	fmt.Println("Server Started >>> localhost:3000")
-	err := http.ListenAndServe("18.171.153.211:3000", mux)
+	err := http.ListenAndServe(":3000", mux)
 	if err != nil {
 		log.Fatal("error: ", err)
 	}
